@@ -3,8 +3,8 @@ class Aehcli < Formula
 
   desc "Framework-neutral, task-level evaluation and regression harness for AI agents"
   homepage "https://github.com/laninenterline/agent-eval-harness"
-  url "https://files.pythonhosted.org/packages/c3/ad/7beeebb82df97ae369e5115b1c26aa77711ec5b5d8d8644cdc98d1d4accd/aehcli-0.1.0.tar.gz"
-  sha256 "d185e6fb79cae7f6c517fd7d81e3b84cdfe6b073db4d5dca928e037ecc98df06"
+  url "https://files.pythonhosted.org/packages/1c/01/5c5c9bcea62cd7cb7afbc31333c2ec999df82bbd35e8167c97c0730f3b1f/aehcli-0.1.1.tar.gz"
+  sha256 "db97bdcf624ca84d5f529e3e1b491c17059541c1cd6229095f4dee31a110fdbf"
   license "Apache-2.0"
 
   depends_on "python@3.12"
@@ -15,6 +15,7 @@ class Aehcli < Formula
 
   test do
     assert_match "usage: aeh", shell_output("#{bin}/aeh --help")
-    assert_match "deepseek-v4-pro", shell_output("#{bin}/aeh judges")
+    assert_match "demo", shell_output("#{bin}/aeh demo")
   end
 end
+
